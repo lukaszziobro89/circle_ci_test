@@ -24,6 +24,7 @@ jobs:
       - run: python3 -m pip install --upgrade pip
       - run: sudo python3 -m pip install -r requirements.txt
       - run: pytest
+      - run: mkdir /tmp/test-reports
       - store_test_results:
           path: /tmp/test-results
 
