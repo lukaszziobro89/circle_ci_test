@@ -24,6 +24,9 @@ jobs:
       - run: python3 -m pip install --upgrade pip
       - run: sudo python3 -m pip install -r requirements.txt
       - run: pytest
+      - store_test_results:
+          path: /tmp/test-results
+
 
       # Add the server to known hosts
       - run: ssh-keyscan -H 161.97.74.5 >> ~/.ssh/known_hosts
