@@ -22,8 +22,7 @@ jobs:
 
       # Check out the code in the project directory
       - checkout
-      - run: sudo pip install -r requirements.txt
-      - run: sudo pip install pytest
+      - run: sudo python -m pip install -r requirements.txt
       - run: pytest
 
       # Add the server to known hosts
