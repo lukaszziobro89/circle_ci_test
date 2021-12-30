@@ -14,6 +14,8 @@ jobs:
 
       # Install rsync. It will be used to upload our code to server
       - run: sudo apt-get install rsync
+      - run: apt-get install python3-pip
+
 
       # Sync the SSH keys 
       - add_ssh_keys
