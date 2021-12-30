@@ -23,10 +23,7 @@ jobs:
       - run: sudo apt-get install python3-pip
       - run: python3 -m pip install --upgrade pip
       - run: sudo python3 -m pip install -r requirements.txt
-      - run: mkdir /tmp/test-reports
       - run: pytest
-      - store_test_results:
-          path: tests
 
 
       # Add the server to known hosts
