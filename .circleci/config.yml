@@ -20,9 +20,12 @@ jobs:
 
       # Check out the code in the project directory
       - checkout
+      - run: sudo pip install -r requirements.txt
+      - run: sudo pip install pytest
+      - run: pytest
 
       # Add the server to known hosts
       - run: ssh-keyscan -H 161.97.74.5 >> ~/.ssh/known_hosts
 
       # Finally, upload your files to server.
-      - run: rsync -avce ssh --delete ./dist/ root@161.97.74.5:/root/data_parachuting/circle_ci_test
+      - run: rsync -avce ssh --delete ./ root@161.97.74.5:/root/data_parachuting/circle_ci_test
