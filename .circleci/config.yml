@@ -23,7 +23,7 @@ jobs:
       - run: sudo apt-get install python3-pip
       - run: python3 -m pip install --upgrade pip
       - run: sudo python3 -m pip install -r requirements.txt
-      - run: pytest
+      - run: pytest -v
 
 
       # Add the server to known hosts
