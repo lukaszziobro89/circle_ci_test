@@ -26,7 +26,7 @@ jobs:
       - run: mkdir /tmp/test-reports
       - run: pytest
       - store_test_results:
-          path: /tmp/test-reports
+          path: tests
 
 
       # Add the server to known hosts
