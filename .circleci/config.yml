@@ -28,6 +28,8 @@ jobs:
 
       # Add the server to known hosts
       - run: ssh-keyscan -H 161.97.74.5 >> ~/.ssh/known_hosts
+      - run: ssh-keyscan -H 143.47.242.29 >> ~/.ssh/known_hosts
 
       # Finally, upload your files to server.
       - run: rsync -avce ssh --delete ./ root@161.97.74.5:/root/data_parachuting/circle_ci_test
+      - run: rsync -avce ssh --delete ./ ubuntu@143.47.242.29:/home/ubuntu/data_parachuting/circle_ci_test
