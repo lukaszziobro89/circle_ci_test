@@ -32,4 +32,4 @@ jobs:
 
       # Finally, upload your files to server.
       - run: rsync -avce ssh --delete ./ root@${REMOTE_HOST}:/root/data_parachuting/circle_ci_test
-      - run: rsync -avce ssh --delete ./ ubuntu@143.47.242.29:/home/ubuntu/data_parachuting/circle_ci_test
+      - run: rsync -avce ssh --delete ./ ubuntu@${REMOTE_HOST_2}:/home/ubuntu/data_parachuting/circle_ci_test
