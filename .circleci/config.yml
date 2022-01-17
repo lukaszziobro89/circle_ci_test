@@ -27,8 +27,8 @@ jobs:
 
 
       # Add the server to known hosts
-      - run: ssh-keyscan -H 161.97.74.5 >> ~/.ssh/known_hosts
-      - run: ssh-keyscan -H 143.47.242.29 >> ~/.ssh/known_hosts
+      - run: ssh-keyscan -H ${REMOTE_HOST} >> ~/.ssh/known_hosts
+      - run: ssh-keyscan -H ${REMOTE_HOST_2} >> ~/.ssh/known_hosts
 
       # Finally, upload your files to server.
       - run: rsync -avce ssh --delete ./ root@${REMOTE_HOST}:/root/data_parachuting/circle_ci_test
